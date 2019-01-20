@@ -2,13 +2,14 @@
 //
 
 #include "ArrayPractice.h"
-#include "SimpleTree.h"
-#include "SimpleHeap.h"
+#include "SampleTree.h"
+#include "SampleHeap.h"
+#include "SampleGraph.h"
 #include <iostream>
 
 int main()
 {
-	std::vector<int> v{ 1,2,-6,3,4,5 };
+	//std::vector<int> v{ 1,2,-6,3,4,5 };
 	////std::vector<int> v{ 1,2,3,4,5 };
 
 	////maxSubTest(v);
@@ -18,16 +19,16 @@ int main()
 	//}
 
 	////this tree sould print 1,2,3,4,5 in order
-	//SimpleTree tree(1,
-	//	new SimpleTree(2, nullptr, nullptr),
-	//	new SimpleTree(3,
-	//		new SimpleTree(4, nullptr, nullptr),
-	//		new SimpleTree(5, nullptr, nullptr)));
+	//SampleTree tree(1,
+	//	new SampleTree(2, nullptr, nullptr),
+	//	new SampleTree(3,
+	//		new SampleTree(4, nullptr, nullptr),
+	//		new SampleTree(5, nullptr, nullptr)));
 
 	//tree.recursionWalk();
 	//tree.stackWalk();
 
-	//SimpleHeap heap(v);
+	//SampleHeap heap(v);
 	//heap.printHeap();
 
 	//heap.push(6);
@@ -39,8 +40,15 @@ int main()
 
 	//printArrayOfArray(pascalTriangle(5));
 
-	std::vector<std::vector<int>> a{ {1},{2},{3} };
-	printArray(spiralOrder(a));
+	//std::vector<std::vector<int>> a{ {1},{2},{3} };
+	//printArray(spiralOrder(a));
+
+	std::vector<std::vector<int>> adjacent_list{ {1,2,3}, {0,4}, {0,4}, {0,4}, {1,2,3} };
+	SampleGraph graph(adjacent_list);
+	//graph.depthFirstSearch(0);
+	//graph.breadthFirstSearch(0);
+	int a = 0, b = 4;
+	std::cout <<"There is any route from " << a << " to " << b << "? " << graph.bidirectionalSearch(a, b) << std::endl;
 
 }
 

@@ -152,16 +152,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ArrayPractice.h" />
-    <ClInclude Include="SimpleHeap.h" />
-    <ClInclude Include="SimpleTree.h" />
+    <ClInclude Include="SampleGraph.h" />
+    <ClInclude Include="SampleHeap.h" />
+    <ClInclude Include="SampleQueue.h" />
+    <ClInclude Include="SampleTree.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ArraysPractice.cpp" />
-    <ClCompile Include="SimpleHeap.cpp" />
+    <ClCompile Include="SampleGraph.cpp" />
+    <ClCompile Include="SampleHeap.cpp" />
     <ClCompile Include="Practice.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="SimpleTree.cpp" />
+    <ClCompile Include="SampleQueue.cpp" />
+    <ClCompile Include="SampleTree.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

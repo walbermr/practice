@@ -18,10 +18,16 @@
     <ClInclude Include="ArrayPractice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SimpleTree.h">
+    <ClInclude Include="SampleGraph.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SimpleHeap.h">
+    <ClInclude Include="SampleHeap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SampleTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SampleQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -32,10 +38,16 @@
     <ClCompile Include="ArraysPractice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SimpleTree.cpp">
+    <ClCompile Include="SampleGraph.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SimpleHeap.cpp">
+    <ClCompile Include="SampleHeap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SampleTree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SampleQueue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

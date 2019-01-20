@@ -1,8 +1,8 @@
-#include "SimpleTree.h"
+#include "SampleTree.h"
 
 
 
-SimpleTree::SimpleTree(int key, SimpleTree *left, SimpleTree *right)
+SampleTree::SampleTree(int key, SampleTree *left, SampleTree *right)
 {
 	this->key = key;
 	this->left = left;
@@ -10,19 +10,19 @@ SimpleTree::SimpleTree(int key, SimpleTree *left, SimpleTree *right)
 }
 
 
-SimpleTree::~SimpleTree()
+SampleTree::~SampleTree()
 {
 }
 
 
-void SimpleTree::recursionWalk()
+void SampleTree::recursionWalk()
 {
 	this->_recursionWalk(this);
 	std::cout << std::endl;
 }
 
 
-void SimpleTree::_recursionWalk(SimpleTree* tree)
+void SampleTree::_recursionWalk(SampleTree* tree)
 {
 	if (tree == nullptr)
 		return;
@@ -34,9 +34,9 @@ void SimpleTree::_recursionWalk(SimpleTree* tree)
 }
 
 
-void SimpleTree::stackWalk() {
-	std::vector<SimpleTree*> stack;
-	SimpleTree* tree;
+void SampleTree::stackWalk() {
+	std::vector<SampleTree*> stack;
+	SampleTree* tree;
 	stack.push_back(this);
 
 	while (!stack.empty()){

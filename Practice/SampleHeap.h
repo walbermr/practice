@@ -6,15 +6,15 @@
 	- COMPLETE WITH MINHEAPIFY
 	- USE TEMPLATE CLASS
 */
-class SimpleHeap
+class SampleHeap
 {
 private:
 	std::vector<int> elems;
 	std::vector<int> maxHeapify(std::vector<int> elems, int pos);
 	std::vector<int> buildHeap(std::vector<int> elems);
 public:
-	SimpleHeap(const std::vector<int>& elems);
-	~SimpleHeap();
+	SampleHeap(const std::vector<int>& elems);
+	~SampleHeap();
 	bool empty();
 	int size();
 	void push(int elem);

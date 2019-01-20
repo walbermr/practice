@@ -1,32 +1,32 @@
-#include "SimpleHeap.h"
+#include "SampleHeap.h"
 
 
 
-SimpleHeap::SimpleHeap(const std::vector<int>& elems)
+SampleHeap::SampleHeap(const std::vector<int>& elems)
 {
 	this->elems = elems;
 	this->elems = buildHeap(elems);
 }
 
 
-SimpleHeap::~SimpleHeap()
+SampleHeap::~SampleHeap()
 {
 }
 
 
-bool SimpleHeap::empty()
+bool SampleHeap::empty()
 {
 	return this->elems.empty();
 }
 
 
-int SimpleHeap::size()
+int SampleHeap::size()
 {
 	return this->elems.size();
 }
 
 
-void SimpleHeap::push(int elem)
+void SampleHeap::push(int elem)
 {
 	this->elems.push_back(elem);
 	int new_elem_pos = this->elems.size() - 1;
@@ -41,7 +41,7 @@ void SimpleHeap::push(int elem)
 }
 
 
-std::vector<int> SimpleHeap::maxHeapify(std::vector<int> elems, int i)
+std::vector<int> SampleHeap::maxHeapify(std::vector<int> elems, int i)
 {
 	/* This funciton intends to keep the heap properties
 	*/
@@ -68,7 +68,7 @@ std::vector<int> SimpleHeap::maxHeapify(std::vector<int> elems, int i)
 }
 
 
-std::vector<int> SimpleHeap::buildHeap(std::vector<int> elems)
+std::vector<int> SampleHeap::buildHeap(std::vector<int> elems)
 {
 	for (int i = (elems.size() - 1) / 2; i >= 0; i -= 1)
 	{
@@ -78,7 +78,7 @@ std::vector<int> SimpleHeap::buildHeap(std::vector<int> elems)
 }
 
 
-void SimpleHeap::printHeap()
+void SampleHeap::printHeap()
 {
 	//why this need class
 	for (class std::vector<int>::iterator i = this->elems.begin(); i != this->elems.end(); i++)
@@ -87,7 +87,7 @@ void SimpleHeap::printHeap()
 	std::cout << std::endl;
 }
 
-int SimpleHeap::pop()
+int SampleHeap::pop()
 {
 	//make first element the return value, swap first with last, pop last, heapify first
 	int aux = this->elems[0];
