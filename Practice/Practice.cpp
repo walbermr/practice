@@ -5,7 +5,10 @@
 #include "SampleTree.h"
 #include "SampleHeap.h"
 #include "SampleGraph.h"
+#include "SampleQueue.h"
 #include <iostream>
+
+// todo: add initializer_list to all classes
 
 int main()
 {
@@ -43,12 +46,17 @@ int main()
 	//std::vector<std::vector<int>> a{ {1},{2},{3} };
 	//printArray(spiralOrder(a));
 
-	std::vector<std::vector<int>> adjacent_list{ {1,2,3}, {0,4}, {0,4}, {0,4}, {1,2,3} };
-	SampleGraph graph(adjacent_list);
-	//graph.depthFirstSearch(0);
-	//graph.breadthFirstSearch(0);
-	int a = 0, b = 4;
-	std::cout <<"There is any route from " << a << " to " << b << "? " << graph.bidirectionalSearch(a, b) << std::endl;
+	//std::vector<std::vector<int>> adjacent_list{ {1,2,3}, {0,4}, {0,4}, {0,4}, {1,2,3} };
+	//SampleGraph graph(adjacent_list);
+	////graph.depthFirstSearch(0);
+	////graph.breadthFirstSearch(0);
+	//int a = 0, b = 4;
+	//std::cout <<"There is any route from " << a << " to " << b << "? " << graph.bidirectionalSearch(a, b) << std::endl;
 
+	SampleQueue queue({ 1,2,3,4 });
+	queue.push(5);
+
+	while(queue.size() > 0)
+		std::cout << queue.pop() << std::endl;
 }
 
