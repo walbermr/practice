@@ -6,9 +6,33 @@
 #include "SampleHeap.h"
 #include "SampleGraph.h"
 #include "SampleQueue.h"
+#include <vector>
 #include <iostream>
 
 // todo: add initializer_list to all classes
+
+bool BinarySearchIterative(std::vector<int> v, int n)
+{
+	int ret = 0;
+	int begin = 0, end = v.size() - 1, middle = (v.size() - 1)/2;
+
+	while (begin <= end)
+	{
+		if (v[middle] == n)
+			return true;
+		else if (v[middle] > n)
+			end = middle - 1;
+		else
+			begin = middle + 1;
+
+		middle = (end + begin) / 2;
+	}
+
+	if (v[middle] == n)
+		return true;
+
+	return false;
+}
 
 int main()
 {
@@ -53,10 +77,10 @@ int main()
 	//int a = 0, b = 4;
 	//std::cout <<"There is any route from " << a << " to " << b << "? " << graph.bidirectionalSearch(a, b) << std::endl;
 
-	SampleQueue queue({ 1,2,3,4 });
-	queue.push(5);
+	//SampleQueue queue({ 1,2,3,4 });
+	//queue.push(5);
 
-	while(queue.size() > 0)
-		std::cout << queue.pop() << std::endl;
+	//while(queue.size() > 0)
+	//	std::cout << queue.pop() << std::endl;
 }
 
